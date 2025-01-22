@@ -24,13 +24,18 @@ library(stargazer)
 
 stargazer(linMod1,linMod2,type = "text",out = "images/linmod1.text")
 
+library(cowplot)
 
-
-ggplot(data = mtcars, aes(x=mpg,y=wt))+
+plotc <-ggplot(data = mtcars, aes(x=mpg,y=wt))+
   geom_point()
 
-ggplot(data = mtcars, aes(x=drat,y=wt))+
+plotd <- ggplot(data = mtcars, aes(x=drat,y=wt))+
   geom_point()
+
+plotE<-plot_grid(plotc,plotd,labels = c("A","B"))
+
+ggsave2(filename = "images/plotE.png",plot = plotE)
+
 
 
 

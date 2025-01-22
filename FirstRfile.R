@@ -16,10 +16,27 @@ ggsave(filename = "images/MPG HP and WT Plot.png",plot = plotA)
 
 
 linMod1 <- lm(data = mtcars, mpg~hp+wt)
+linMod2 <- lm(data = mtcars, drat~hp+wt)
 
 summary(linMod1)
 
 library(stargazer)
 
-stargazer(linMod1,type = "text",out = "images/linmod1.text")
+stargazer(linMod1,linMod2,type = "text",out = "images/linmod1.text")
+
+
+
+ggplot(data = mtcars, aes(x=mpg,y=wt))+
+  geom_point()
+
+ggplot(data = mtcars, aes(x=drat,y=wt))+
+  geom_point()
+
+
+
+
+
+
+
+
 

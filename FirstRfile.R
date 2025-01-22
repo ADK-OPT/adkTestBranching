@@ -1,13 +1,16 @@
 library(tidyverse)
+source("Themeset.R")
+
+
 
 plotA <- ggplot(data = mtcars,
        aes(x=mpg,
            y=hp,
            size=wt))+
   geom_point()+
-  theme_bw()+
   ggtitle("MPG as HP Increases")+
-  coord_flip()
+  coord_flip()+
+  theme_auditor
 
 ggsave(filename = "images/MPG HP and WT Plot.png",plot = plotA)
 

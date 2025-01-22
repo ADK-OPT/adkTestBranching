@@ -18,5 +18,5 @@ summary(linMod1)
 
 library(stargazer)
 
-stargazer(linMod1,out = "images/linmod1.html")
+stargazer(linMod1,type = "text",out = "images/linmod1.text")
 

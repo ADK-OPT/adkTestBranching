@@ -5,4 +5,5 @@ ggplot(data = mtcars,
            y=hp,
            size=wt))+
   geom_point()+
-  theme_bw()
+  theme_bw()+
+  coord_flip()

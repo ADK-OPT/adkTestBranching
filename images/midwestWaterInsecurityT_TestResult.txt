@@ -1,0 +1,12 @@
+
+	Welch Two Sample t-test
+
+data:  percent_lacking_plumbing by group_col
+t = 1.3216, df = 79.006, p-value = 0.1901
+alternative hypothesis: true difference in means between group midwest and group Ohio is not equal to 0
+95 percent confidence interval:
+ -0.01635529  0.08098930
+sample estimates:
+mean in group midwest    mean in group Ohio 
+           0.10735450            0.07503749 
+
